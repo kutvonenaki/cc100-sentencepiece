@@ -1,0 +1,27 @@
+
+ARG img_digest=5dc11a9036bcb5b7950f4f8a43974057559278fa4bd87513cafd477fef9eb57a
+FROM  pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime@sha256:${img_digest}
+
+ARG BASE_PATH
+ARG PYTHONPATH
+
+ENV BASE_PATH=$BASE_PATH
+ENV PYTHONPATH=$PYTHONPATH
+
+# tensorflow latest gpu jupyter at 2021/3/24
+ENV DEBIAN_FRONTEND=noninteractive   
+
+RUN apt-get update && apt-get install -y  \
+    git \
+    wget \
+    make \
+    pkg-config \
+    build-essential \
+    python-opencv
+
+# Setting Python environment and installing required pacakges
+ADD requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
+
+WORKDIR /work
+CMD ["bash"]
