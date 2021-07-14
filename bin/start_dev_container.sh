@@ -6,4 +6,4 @@ echo "starting container $PROJECT_NAME"
 
 # for gpu server
 docker run -v $PWD:/work \
-    -p 8888:8888 -it $PROJECT_NAME
+    -p 8888:8888 -itd $PROJECT_NAME

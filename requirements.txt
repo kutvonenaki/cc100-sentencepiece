@@ -1,2 +1,2 @@
-pandas
-jupyterlab
+jupyter
+datasets==1.9.0
