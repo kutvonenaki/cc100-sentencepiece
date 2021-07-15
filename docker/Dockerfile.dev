@@ -1,19 +1,22 @@
 #bin the ubuntu verions
-ARG img_digest=1030f108596afba03281f4c350466d74b900922c25e9881c7df6eefce6681080
+ARG img_digest=778fdd9f62a6d7c0e53a97489ab3db17738bc5c1acf09a18738a2a674025eae6
 FROM  ubuntu:20.04@sha256:${img_digest}
 
 ARG BASE_PATH
 ARG PYTHONPATH
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 ENV BASE_PATH=$BASE_PATH
 ENV PYTHONPATH=$PYTHONPATH
 
 RUN apt-get update && apt-get install -y  \
+    python3-pip \
     git \
     wget \
     make \
     pkg-config \
-    build-essential \
+    build-essential
 
 # Setting Python environment and installing required pacakges
 ADD requirements.txt /tmp/requirements.txt
