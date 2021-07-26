@@ -1,2 +1,4 @@
 jupyter
 datasets==1.9.0
+nltk
+tqdm
