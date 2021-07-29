@@ -25,7 +25,7 @@ def make_sentence_files(dataset, chunksize = 10000000, data_dir = cfg.JP_SENTENC
     sent_detector = nltk.RegexpTokenizer(u'[^　！？。]*[！？。.\n]')
     
     # loop over the chunks
-    for chunk_ind, sentence_chunk in enumerate(chunks(dataset, 10, 100)):
+    for chunk_ind, sentence_chunk in enumerate(chunks(dataset, chunksize, len(dataset))):
         
         # new file for each chunk
         filename = "sent_{}.txt".format(chunk_ind)
