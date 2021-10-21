@@ -1,6 +1,6 @@
 #bin the ubuntu verions
-ARG img_digest=778fdd9f62a6d7c0e53a97489ab3db17738bc5c1acf09a18738a2a674025eae6
-FROM  ubuntu:20.04@sha256:${img_digest}
+#ARG img_digest=778fdd9f62a6d7c0e53a97489ab3db17738bc5c1acf09a18738a2a674025eae6
+FROM  ubuntu:20.04
 
 ARG BASE_PATH
 ARG PYTHONPATH
