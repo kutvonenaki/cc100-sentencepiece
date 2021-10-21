@@ -1,6 +1,8 @@
 # en-jp common crawl trained sentencepiece tokenizers
 
-- This repo contains pretrained sentencepiece tokenizers for both English and Japanese. Available vocabulary sizes are 8000, 16000, 32000 and 48000. Tokenizers were trained using common crawl, not the full set but around 70M sampled sentences per tokenizer. See the attached blog post for more information.
+- This repo contains pretrained sentencepiece tokenizers for both English and Japanese. Available vocabulary sizes are 8000, 16000, 32000 and 48000. Tokenizers were trained using common crawl, not the full set but around 70M sampled sentences per tokenizer. See the blog post below for more information.
+
+https://medium.com/@akikutvonen/how-to-train-sentencepiece-tokenizers-for-any-language-with-large-data-pretrained-models-for-e84bb225ed4a
 
 
 
